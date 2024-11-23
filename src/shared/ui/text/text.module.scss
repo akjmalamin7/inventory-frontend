@@ -1,0 +1,110 @@
+@use "../../scss/all" as *;
+.paragraph {
+  @include font();
+}
+
+.span {
+  @include font();
+  display: inline-block;
+}
+.link {
+  @include font();
+  display: inline-block;
+}
+.link.hover:hover {
+  text-decoration: underline;
+}
+.paragraph_sm,
+.span_sm,
+.link_sm {
+  @include font();
+}
+.paragraph_md,
+.span_md,
+.link_md {
+  @include font();
+}
+.paragraph_lg,
+.span_lg,
+.link_lg {
+  @include font();
+}
+.h1 {
+  @include font();
+}
+.h2 {
+  @include font();
+}
+.h3 {
+  @include font();
+}
+.h4 {
+  @include font();
+}
+.h5 {
+  @include font();
+}
+.h6 {
+}
+
+/* color */
+.primary {
+}
+.secondary {
+}
+.tertiary {
+}
+.subdued {
+}
+.linkColor {
+}
+.danger {
+}
+/* text decoration */
+.default {
+  text-decoration: none;
+}
+.line_through {
+  text-decoration: line-through;
+}
+.underline {
+  text-decoration: underline;
+}
+.overline {
+  text-decoration: overline;
+}
+.superline {
+  text-decoration: underline overline;
+}
+
+/* truncate */
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* alignment */
+.start {
+  text-align: start;
+}
+.center {
+  text-align: center;
+}
+.end {
+  text-align: end;
+}
+.justify {
+  text-align: justify;
+}
+
+/* font weight */
+.regular {
+}
+.medium {
+}
+.semiBold {
+}
+.bold {
+}

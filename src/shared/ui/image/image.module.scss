@@ -1,0 +1,64 @@
+@use "@/shared/scss/all" as *;
+.placeholder_image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  overflow: hidden;
+  & img {
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+}
+.xsm_placeholder.placeholder_image {
+  width: 40px;
+  height: 40px;
+}
+.sm_placeholder.placeholder_image {
+  width: 50px;
+  height: 50px;
+}
+.md_placeholder.placeholder_image {
+  width: 70px;
+  height: 70px;
+}
+.lg_placeholder.placeholder_image {
+  width: 100px;
+  height: 100px;
+}
+.xlg_placeholder.placeholder_image {
+  width: 150px;
+  height: 150px;
+}
+
+.placeholder_image.object_fit_fill img {
+  object-fit: fill !important;
+}
+.placeholder_image.object_fit_contain img {
+  object-fit: contain !important;
+}
+.placeholder_image.object_fit_cover img {
+  object-fit: cover !important;
+}
+.placeholder_image.object_fit_scale_down img {
+  object-fit: scale-down !important;
+}
+.placeholder_image.object_fit_none img {
+  object-fit: none !important;
+}
+.placeholder_image.image_scaling {
+  @include flexbox(center, center);
+}
+.placeholder_image.image_scaling::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.default_cursor {
+  cursor: default;
+}
+.pointer_cursor {
+  cursor: pointer;
+}

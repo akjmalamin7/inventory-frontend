@@ -1,6 +1,6 @@
+import { router } from "@/app/routes/routes";
 import useAuthCheck from "@/hooks/useAuthChecked";
-import { router } from "@/routes/routes";
-import { LazyLoader } from "@/ui/lazyLoader";
+import { LazyLoader } from "@/shared/ui/lazyLoader";
 import { RouterProvider } from "react-router-dom";
 
 const App = () => {

@@ -1,0 +1,118 @@
+@use "@/shared/scss/all" as *;
+.btn {
+  position: relative;
+  box-shadow: 0px -1.5px 0px 0px #0000004d inset, 0px 1px 0px 0px #00000014;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  @include flexbox(center, center, $space-30);
+}
+
+.btn--size-sm {
+  @include text-body-sm;
+  padding: $space-30 $space-70;
+  @include tablet {
+    padding: $space-40 $space-70;
+  }
+}
+
+.btn--size-md {
+  @include text-body-md;
+  padding: $space-40 $space-80;
+  @include tablet {
+    padding: $space-50 $space-80;
+  }
+}
+
+.btn--size-lg {
+  @include text-body-lg;
+  padding: $space-40 $space-90;
+  @include tablet {
+    padding: $space-50 $space-90;
+  }
+}
+
+.btn--variant-default {
+  background-color: $sds-color-bg-inverse;
+  color: $sds-color-text-brand-on-bg-fill;
+  &:hover {
+    background-color: $sds-color-bg-fill-brand-hover;
+  }
+}
+.btn--variant-white {
+  background-color: $sds-color-bg-surface;
+  color: $sds-color-text-brand;
+  box-shadow: 0px 1px 0px 0px #0000000d;
+  border: 1px solid $sds-color-border;
+
+  &:hover {
+    background-color: $sds-color-bg-surface-hover;
+    border: 1px solid $sds-color-border-hover;
+  }
+}
+
+.btn--variant-danger {
+  background-color: $sds-color-bg-fill-critical;
+  color: $sds-color-text-brand-on-bg-fill;
+  box-shadow: 0px 1px 0px 0px #0000000d;
+  border: 1px solid $sds-color-border;
+
+  &:hover {
+    background-color: $sds-color-bg-fill-critical-hover;
+    border: 1px solid $sds-color-border-hover;
+  }
+}
+
+.btn--variant-link {
+  background-color: transparent;
+  box-shadow: none;
+  color: $sds-color-text-link;
+  text-decoration: none;
+  &:hover {
+    color: $sds-color-text-link-hover;
+  }
+}
+
+.btn--variant-text {
+  background-color: transparent;
+  box-shadow: none;
+  color: $sds-color-text-brand;
+  text-decoration: none;
+  &:hover {
+    color: $sds-color-text-brand-hover;
+  }
+}
+
+.btn--disabled {
+  background-color: $sds-color-bg-fill-brand-disable;
+  color: $sds-color-text-brand-on-bg-fill;
+  box-shadow: none;
+  cursor: default;
+  &.btn--variant-link {
+    background-color: transparent;
+    color: $sds-color-text-brand-on-bg-fill-disable;
+  }
+  &:hover {
+    background-color: $sds-color-bg-fill-brand-disable;
+  }
+}
+
+.btn--fullWidth {
+  width: 100%;
+}
+
+.btn__loading {
+  position: absolute;
+  @include flexbox(center, center);
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-color: $sds-color-bg-surface-secondary;
+  box-shadow: none;
+  cursor: default;
+}
+@include laptop {
+  .btn {
+    cursor: pointer;
+  }
+}

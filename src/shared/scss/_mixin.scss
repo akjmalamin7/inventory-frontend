@@ -1,0 +1,73 @@
+@use "./variable" as *;
+@use "./typography" as *;
+@use "sass:map";
+
+@mixin tablet {
+  @media (min-width: map.get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: map.get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map.get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+@mixin flexbox($justify: _, $align: _, $gap: _, $direction: _) {
+  display: flex;
+  @if ($justify != _) {
+    justify-content: $justify;
+  }
+  @if ($align != _) {
+    align-items: $align;
+  }
+  @if ($gap != _) {
+    gap: $gap;
+  }
+  @if ($direction != _) {
+    flex-direction: $direction;
+  }
+}
+
+@mixin font($size: _, $weight: _, $lineHeight: _, $color: _) {
+  @if ($size != _) {
+    font-size: $size;
+  }
+  @if ($weight != _) {
+    font-weight: $weight;
+  }
+  @if ($lineHeight != _) {
+    line-height: $lineHeight;
+  }
+  @if ($color != _) {
+    color: $color;
+  }
+}
+
+@mixin text-body-sm {
+  font-size: $sds-text-body-sm-font-size;
+  font-weight: $sds-text-body-sm-font-weight;
+  line-height: $sds-text-body-sm-line-height;
+  font-family: $sds-text-body-sm-font-family;
+}
+
+@mixin text-body-md {
+  font-size: $sds-text-body-md-font-size;
+  font-weight: $sds-text-body-md-font-weight;
+  line-height: $sds-text-body-md-line-height;
+  font-family: $sds-text-body-md-font-family;
+}
+
+@mixin text-body-lg {
+  font-size: $sds-text-body-lg-font-size;
+  font-weight: $sds-text-body-lg-font-weight;
+  line-height: $sds-text-body-lg-line-height;
+  font-family: $sds-text-body-lg-font-family;
+}

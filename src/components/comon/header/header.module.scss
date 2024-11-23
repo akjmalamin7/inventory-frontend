@@ -1,0 +1,37 @@
+@use "@/shared/scss/all" as *;
+.header_section {
+  height: 100%;
+  width: 100%;
+  padding: 0px 20px;
+  @include flexbox();
+  .left_column {
+    height: 100%;
+    width: 100%;
+    @include flexbox();
+  }
+  .hamburger {
+    @include flexbox();
+    & button {
+      padding-left: 0px;
+    }
+  }
+  .right_column {
+    height: 100%;
+    width: 100%;
+    @include flexbox(end, center);
+  }
+  .avatar {
+    position: relative;
+  }
+}
+@include laptop {
+  .header_section {
+    .left_column {
+    }
+    .hamburger {
+      display: none;
+    }
+    .right_column {
+    }
+  }
+}

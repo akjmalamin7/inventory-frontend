@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   AUTH_INITIAL_STATE,
   UserSchema,
-} from "../../../schema/auth/auth.schema";
+} from "../../../shared/schema/auth/auth.schema";
 
 const authSlice = createSlice({
   name: "auth",
