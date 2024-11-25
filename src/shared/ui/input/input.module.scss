@@ -1,0 +1,162 @@
+@use "@/shared/scss/all" as *;
+
+.wrapper {
+  width: 100%;
+}
+.label_action_wrapper {
+  @include flexbox(space-between, center);
+  margin-bottom: $space-4;
+}
+.label_text {
+  font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular, _, $black-s17);
+  @include flexbox(start, center);
+  width: 100%;
+}
+.action_text_wrapper {
+  @include flexbox(end, center);
+  width: 100%;
+}
+.action_text {
+  //   font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular, _, $green-s6);
+}
+
+.input_field_wrapper {
+  position: relative;
+  width: 100%;
+  height: $space-19;
+}
+/* size */
+.sm_input {
+  height: $space-15 !important;
+}
+.md_input {
+  height: $space-17 !important;
+}
+.lg_input {
+  height: $space-19 !important;
+}
+.input_field {
+  border: $space-1 solid $ex-color-s2;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  padding: $space-0 $space-7;
+  box-sizing: border-box;
+  background: transparent;
+  outline: $space-1 solid transparent;
+  font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular, _, $black-s17);
+
+  &:focus {
+    border: $space-1 solid transparent;
+    outline-color: $black-s17;
+    background: transparent !important;
+  }
+}
+.input_field::placeholder {
+  @include font($font-size-00, $font-weight-regular, _, $gray-s5);
+}
+.password {
+  position: absolute;
+  border: none;
+  height: 100%;
+  width: $space-19;
+  top: $space-0;
+  right: $space-0;
+  background: transparent;
+}
+.search_icon {
+  position: absolute;
+  border: none;
+  height: 100%;
+  width: $space-19;
+  top: $space-0;
+  left: $space-0;
+  background: transparent;
+  @include flexbox(center, center);
+}
+.search_icon_padding {
+  padding-left: $space-16 !important;
+}
+.error_style {
+  background: $red-s1;
+  border-color: $red-s1;
+}
+.error_text {
+  font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular);
+  letter-spacing: 0.5px;
+  margin: $space-4 $space-0 $space-0 $space-0;
+}
+.help_text {
+  font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular, _, $blue-s1);
+  letter-spacing: 0.5px;
+  margin: $space-4 $space-0 $space-0 $space-0;
+}
+.cross_icon {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: $space-0;
+  top: $space-0;
+  height: 100%;
+  width: $space-16;
+  @include flexbox(center, center);
+  & svg {
+    width: $space-11;
+    height: $space-9;
+  }
+}
+.prefix {
+  background: transparent;
+  border: none;
+  position: absolute;
+  left: $space-0;
+  top: $space-0;
+  height: 100%;
+  width: $space-16;
+  @include flexbox(center, center);
+}
+.suffix {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: $space-0;
+  top: $space-0;
+  height: 100%;
+  width: $space-16;
+  @include flexbox(center, center);
+}
+.suffix_icon_padding {
+  padding-left: $space-17;
+}
+.prefix_icon_padding {
+  padding-right: $space-17;
+}
+@include tablet {
+  /* size */
+  .sm_input {
+    height: $space-17 !important;
+  }
+
+  .md_input {
+    height: $space-19 !important;
+  }
+
+  .lg_input {
+    height: $space-21 !important;
+  }
+}
+
+@include laptop {
+  .action_text {
+    cursor: pointer;
+  }
+  .password,
+  .cross_icon {
+    cursor: pointer;
+  }
+}

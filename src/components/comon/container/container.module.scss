@@ -1,0 +1,23 @@
+@use "@/shared/scss/all" as *;
+.xsm_container,
+.sm_container,
+.md_container,
+.lg_container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+@include tablet {
+  .xsm_container {
+    max-width: 614px;
+  }
+  .sm_container {
+    max-width: 800px;
+  }
+  .md_container {
+    max-width: 1200px;
+  }
+  .lg_container {
+    max-width: 1632px;
+  }
+}

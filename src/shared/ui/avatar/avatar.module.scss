@@ -4,6 +4,7 @@
   height: 28px;
   border-radius: 3px;
   overflow: hidden;
+
   @include flexbox(center, center, 2px);
   & .name {
     letter-spacing: 1px;

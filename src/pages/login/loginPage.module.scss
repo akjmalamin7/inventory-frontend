@@ -1,0 +1,34 @@
+@use "@/shared/scss/all" as *;
+.login_page {
+  height: 100dvh;
+  @include flexbox(center, center);
+  .login_page_content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    .left_column {
+      @include flexbox(center);
+      .image {
+        max-width: 200px;
+      }
+    }
+    .right_column {
+    }
+  }
+}
+@include laptop {
+  .login_page {
+    .login_page_content {
+      grid-template-columns: repeat(2, 1fr);
+      .left_column {
+        @include flexbox(center, center);
+        .image {
+          max-width: 200px;
+        }
+      }
+      .right_column {
+        @include flexbox(start, center);
+      }
+    }
+  }
+}

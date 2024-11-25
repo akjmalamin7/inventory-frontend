@@ -1,0 +1,16 @@
+@use "@/shared/scss/all" as *;
+.wrapper {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+  .logo {
+    @include flexbox(center);
+    margin-bottom: 16px;
+  }
+  .heading {
+    margin-bottom: 20px;
+  }
+  .form {
+    @include flexbox(_, _, $space-9, column);
+  }
+}

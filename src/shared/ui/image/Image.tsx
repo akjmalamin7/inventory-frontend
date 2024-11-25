@@ -5,7 +5,7 @@ import { ImageProps } from "./image.schema";
 const Image = ({
   imgURL,
   altText,
-  size = "md",
+  size,
   objectFit,
   className,
   width,

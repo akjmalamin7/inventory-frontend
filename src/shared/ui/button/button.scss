@@ -3,39 +3,75 @@
   position: relative;
   box-shadow: 0px -1.5px 0px 0px #0000004d inset, 0px 1px 0px 0px #00000014;
   border: 1px solid transparent;
-  border-radius: 8px;
-  @include flexbox(center, center, $space-30);
+  border-radius: 3px;
+  @include flexbox(center, center, $space-3);
 }
 
 .btn--size-sm {
   @include text-body-sm;
-  padding: $space-30 $space-70;
+  padding: $space-3 $space-9;
+  @include font($font-size-00);
   @include tablet {
-    padding: $space-40 $space-70;
+    padding: $space-4 $space-9;
   }
 }
 
 .btn--size-md {
   @include text-body-md;
-  padding: $space-40 $space-80;
+  padding: $space-4 $space-11;
+  @include font($font-size-01);
   @include tablet {
-    padding: $space-50 $space-80;
+    padding: $space-5 $space-11;
   }
 }
 
 .btn--size-lg {
   @include text-body-lg;
-  padding: $space-40 $space-90;
+  padding: $space-4 $space-13;
   @include tablet {
-    padding: $space-50 $space-90;
+    padding: $space-5 $space-13;
   }
 }
 
-.btn--variant-default {
+.btn--variant-default,
+.btn--variant-dark {
   background-color: $sds-color-bg-inverse;
   color: $sds-color-text-brand-on-bg-fill;
   &:hover {
     background-color: $sds-color-bg-fill-brand-hover;
+  }
+}
+.btn--variant-success {
+  background-color: $green-s3;
+  color: $black-s1;
+  box-shadow: 0px 1px 0px 0px #0000000d;
+  border: 1px solid $green-s3;
+
+  &:hover {
+    background-color: $green-s2;
+    border: 1px solid $green-s3;
+  }
+}
+.btn--variant-warning {
+  background-color: $yellow-s5;
+  color: $black-s1;
+  box-shadow: 0px 1px 0px 0px #0000000d;
+  border: 1px solid $yellow-s5;
+
+  &:hover {
+    background-color: $yellow-s4;
+    border: 1px solid $yellow-s5;
+  }
+}
+.btn--variant-primary {
+  background-color: $blue-s7;
+  color: $black-s1;
+  box-shadow: 0px 1px 0px 0px #0000000d;
+  border: 1px solid $blue-s7;
+
+  &:hover {
+    background-color: $blue-s6;
+    border: 1px solid $blue-s7;
   }
 }
 .btn--variant-white {
@@ -84,7 +120,7 @@
 
 .btn--disabled {
   background-color: $sds-color-bg-fill-brand-disable;
-  color: $sds-color-text-brand-on-bg-fill;
+  color: $sds-color-bg-fill-brand-disable;
   box-shadow: none;
   cursor: default;
   &.btn--variant-link {
@@ -93,6 +129,7 @@
   }
   &:hover {
     background-color: $sds-color-bg-fill-brand-disable;
+    cursor: default;
   }
 }
 
@@ -105,8 +142,8 @@
   @include flexbox(center, center);
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  border: 2px solid transparent;
+  border-radius: 3px;
+  border: 1px solid $sds-color-bg-surface-secondary !important;
   background-color: $sds-color-bg-surface-secondary;
   box-shadow: none;
   cursor: default;

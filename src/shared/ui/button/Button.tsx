@@ -4,9 +4,19 @@ import { Spinner } from "../spinner";
 import "./button.scss";
 
 interface Props extends React.ComponentProps<"button"> {
-  variant?: "default" | "white" | "link" | "text" | "danger";
+  variant?:
+    | "dark"
+    | "success"
+    | "warning"
+    | "danger"
+    | "primary"
+    | "secondary"
+    | "white"
+    | "link"
+    | "text"
+    | "disabled";
   size?: "sm" | "md" | "lg";
-  htmlType?: "submit" | "reset" | "button";
+  type?: "submit" | "reset" | "button";
   target?: React.HTMLAttributeAnchorTarget;
   href?: string;
   icon?: React.ReactNode;

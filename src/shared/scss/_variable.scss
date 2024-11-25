@@ -1,6 +1,11 @@
+$font-family-inter: "Inter", serif;
 /*=============================================
 =            Colors            =
 =============================================*/
+/* extra color */
+$ex-color-s1: #9d9d9d;
+$ex-color-s2: #d0d5dd;
+
 $black-s1: #ffffff;
 $black-s2: #fdfdfd;
 $black-s3: #fafafa;
@@ -98,22 +103,17 @@ $teal-s14: #00a0ac;
 $teal-s15: #00a0ac;
 $teal-s16: #00a0ac;
 
-$blue-s1: #005bd3; /* base */
-$blue-s2: #004299;
-$blue-s3: #002e6a;
-$blue-s4: #005bd3;
-$blue-s5: #005bd3;
-$blue-s6: #005bd3;
-$blue-s7: #005bd3;
-$blue-s8: #005bd3;
-$blue-s9: #005bd3;
-$blue-s10: #005bd3;
-$blue-s11: #005bd3;
-$blue-s12: #005bd3;
-$blue-s13: #005bd3;
-$blue-s14: #005bd3;
-$blue-s15: #005bd3;
-$blue-s16: #005bd3;
+$blue-s1: #e8f1fd; /* base */
+$blue-s2: #b6d3fa;
+$blue-s3: #93bdf8;
+$blue-s4: #629ff4;
+$blue-s5: #448df2;
+$blue-s6: #448df2;
+$blue-s7: #1570ef;
+$blue-s8: #1366d9;
+$blue-s9: #0f50aa;
+$blue-s10: #0c3e83;
+$blue-s11: #092f64;
 
 $purple-s1: #5f27cd; /* base */
 $purple-s2: #5f27cd;
@@ -236,22 +236,17 @@ $colors: (
     s16: #00a0ac,
   ),
   blue: (
-    s1: #005bd3,
-    s2: #004299,
-    s3: #002e6a,
-    /* base */ s4: #005bd3,
-    s5: #005bd3,
-    s6: #005bd3,
-    s7: #005bd3,
-    s8: #005bd3,
-    s9: #005bd3,
-    s10: #005bd3,
-    s11: #005bd3,
-    s12: #005bd3,
-    s13: #005bd3,
-    s14: #005bd3,
-    s15: #005bd3,
-    s16: #005bd3,
+    s1: #e8f1fd,
+    s2: #b6d3fa,
+    s3: #93bdf8,
+    s4: #629ff4,
+    s5: #448df2,
+    s6: #448df2,
+    s7: #1570ef,
+    /* base */ s8: #1366d9,
+    s9: #0f50aa,
+    s10: #0c3e83,
+    s11: #092f64,
   ),
   purple: (
     /* base */ s1: #5f27cd,
@@ -292,6 +287,7 @@ $font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
   "Liberation Mono", Menlo, monospace; /* 2 */
 
 /*----------  Font Sizes  ----------*/
+$font-size-00: 0.75rem; /* 12px */
 $font-size-01: 0.875rem; /* 14px */
 $font-size-02: 1rem; /* 16px */
 $font-size-03: 1.125rem; /* 18px */
@@ -305,6 +301,7 @@ $font-size-09: 2.5rem; /*40px  */
 $font-size-10: 3rem; /*48px  */
 
 $font-size: (
+  00: 0.75rem,
   01: 0.875rem,
   02: 1rem,
   03: 1.125rem,
@@ -340,16 +337,11 @@ $line-height: (
   01: 1.5rem,
   02: 1.625rem,
   03: 1.75rem,
-
   04: 1.875rem,
-
   05: 2.125rem,
-
   06: 2.5rem,
-
   07: 2rem,
   08: 2.875rem,
-
   09: 3.125rem,
   10: 3.625rem,
 );
@@ -373,41 +365,153 @@ $font-weight: (
 =============================================*/
 
 $space-0: 0rem;
-$space-10: 0.063rem; /* 1.008px */
-$space-20: 0.125rem; /* 2px */
-$space-30: 0.25rem; /*  4px*/
-$space-40: 0.375rem; /* 6px */
-$space-50: 0.5rem; /*  8px*/
-$space-60: 0.75rem; /* 12px */
-$space-70: 1rem; /* 16px */
-$space-80: 1.25rem; /* 20px */
-$space-90: 1.5rem; /* 24px */
-$space-100: 2rem; /* 32px */
-$space-110: 3rem; /* 48px */
-$space-120: 3.5rem; /* 56px */
-$space-130: 4rem; /* 64px */
-$space-140: 5.5rem; /* 88px */
-$space-150: 6rem; /* 96px */
-$space-160: 8rem; /*128px */
+$space-1: 0.063rem; /* 1px */
+$space-2: 0.125rem; /* 2px */
+$space-3: 0.25rem; /*  4px*/
+$space-4: 0.375rem; /* 6px */
+$space-5: 0.5rem; /*  8px*/
+$space-6: 0.625rem; /* 10px */
+$space-7: 0.75rem; /* 12px */
+$space-8: 0.875rem; /* 14px */
+$space-9: 1rem; /* 16px */
+$space-10: 1.125rem; /* 18px */
+$space-11: 1.25rem; /* 20px */
+$space-12: 1.375rem; /* 22px */
+$space-13: 1.5rem; /* 24px */
+$space-14: 1.625rem; /* 26px */
+$space-15: 1.75rem; /* 28px */
+$space-16: 1.875rem; /* 30px */
+$space-17: 2rem; /*32px */
+$space-18: 2.125rem; /*34px */
+$space-19: 2.25rem; /*36px */
+$space-20: 2.375rem; /*38px */
+$space-21: 2.5rem; /*40px */
+$space-22: 2.625rem; /*42px */
+$space-23: 2.75rem; /*44px */
+$space-24: 2.875rem; /*46px */
+$space-25: 3rem; /*48px */
+$space-26: 3.125rem; /*50px */
+$space-27: 3.25rem; /*52px */
+$space-28: 3.375rem; /*54px */
+$space-29: 3.5rem; /*56px */
+$space-30: 3.625rem; /*58px */
+$space-31: 3.75rem; /*60px */
+$space-32: 3.875rem; /*62px */
+$space-33: 4rem; /*64px */
+$space-34: 4.125rem; /*66px */
+$space-35: 4.25rem; /*68px */
+$space-36: 4.375rem; /*70px */
+$space-37: 4.5rem; /*72px */
+$space-38: 4.625rem; /*74px */
+$space-39: 4.75rem; /*76px */
+$space-40: 4.875rem; /*78px */
+$space-41: 5rem; /*80px */
+$space-42: 5.125rem; /*820px */
+$space-43: 5.25rem; /*84px */
+$space-44: 5.375rem; /*86px */
+$space-45: 5.5rem; /*88px */
+$space-46: 5.625rem; /*90px */
+$space-47: 5.75rem; /*92px */
+$space-48: 5.875rem; /*94px */
+$space-49: 6rem; /*96px */
+$space-50: 6.125rem; /*98px */
+$space-51: 6.25rem; /*100px */
+$space-52: 6.375rem; /*102px */
+$space-53: 6.5rem; /*104px */
+$space-54: 6.625rem; /*106px */
+$space-55: 6.75rem; /*108px */
+$space-56: 6.875rem; /*110px */
+$space-57: 7rem; /*112px */
+$space-58: 7.125rem; /*114px */
+$space-59: 7.25rem; /*116px */
+$space-60: 7.375rem; /*118px */
+$space-61: 7.5rem; /*120px */
+$space-62: 7.625rem; /*122px */
+$space-63: 67.75rem; /*124px */
+$space-64: 7.875rem; /*126px */
+$space-65: 8rem; /*128px */
+$space-66: 8.125rem; /*130px */
+$space-67: 8.25rem; /*132px */
+$space-68: 8.375rem; /*134px */
+$space-69: 8.5rem; /*136px */
+$space-70: 8.625rem; /*138px */
+$space-71: 8.75rem; /*140px */
+$space-72: 8.875rem; /*142px */
 
 $space: (
   0: 0rem,
-  10: 0.063rem,
-  20: 0.125rem,
-  30: 0.25rem,
-  40: 0.375rem,
-  50: 0.5rem,
-  60: 0.75rem,
-  70: 1rem,
-  80: 1.25rem,
-  90: 1.5rem,
-  100: 2rem,
-  110: 3rem,
-  120: 3.5rem,
-  130: 4rem,
-  140: 5.5rem,
-  150: 6rem,
-  160: 8rem,
+  1: 0.063rem,
+  2: 0.125rem,
+  3: 0.25rem,
+  4: 0.375rem,
+  5: 0.5rem,
+  6: 0.625rem,
+  7: 0.75rem,
+  8: 0.875rem,
+  9: 1rem,
+  10: 1.125rem,
+  11: 1.25rem,
+  12: 1.375rem,
+  13: 1.5rem,
+  14: 1.625rem,
+  15: 1.75rem,
+  16: 1.875rem,
+  17: 2rem,
+  18: 2.125rem,
+  19: 2.25rem,
+  20: 2.375rem,
+  21: 2.5rem,
+  22: 2.625rem,
+  23: 2.75rem,
+  24: 2.875rem,
+  25: 3rem,
+  26: 3.125rem,
+  27: 3.25rem,
+  28: 3.375rem,
+  29: 3.5rem,
+  30: 3.625rem,
+  31: 3.75rem,
+  32: 3.875rem,
+  33: 4rem,
+  34: 4.125rem,
+  35: 4.25rem,
+  36: 4.375rem,
+  37: 4.5rem,
+  38: 4.625rem,
+  39: 4.75rem,
+  40: 4.875rem,
+  41: 5rem,
+  42: 5.125rem,
+  43: 5.25rem,
+  44: 5.375rem,
+  45: 5.5rem,
+  46: 5.625rem,
+  47: 5.75rem,
+  48: 5.875rem,
+  49: 6rem,
+  50: 6.125rem,
+  51: 6.25rem,
+  52: 6.375rem,
+  53: 6.5rem,
+  54: 6.625rem,
+  55: 6.75rem,
+  56: 6.875rem,
+  57: 7rem,
+  58: 7.125rem,
+  59: 7.25rem,
+  60: 7.375rem,
+  61: 7.5rem,
+  62: 7.625rem,
+  63: 67.75rem,
+  64: 7.875rem,
+  65: 8rem,
+  66: 8.125rem,
+  67: 8.25rem,
+  68: 8.375rem,
+  69: 8.5rem,
+  70: 8.625rem,
+  71: 8.75rem,
+  72: 8.875rem,
 );
 
 /*=============================================

@@ -10,32 +10,32 @@
 }
 
 .spinner--size-xsm {
-  height: $space-70;
-  width: $space-70;
-  border-width: 2px;
+  height: $space-9;
+  width: $space-9;
+  border-width: $space-2;
 }
 
 .spinner--size-sm {
-  height: $space-80;
-  width: $space-80;
+  height: $space-11;
+  width: $space-11;
   border-width: 2.5px;
 }
 
 .spinner--size-md {
-  height: $space-100;
-  width: $space-100;
+  height: $space-17;
+  width: $space-17;
   border-width: 2.5px;
 }
 
 .spinner--size-lg {
-  height: $space-110;
-  width: $space-110;
+  height: $space-25;
+  width: $space-25;
   border-width: 3px;
 }
 
 .spinner--size-xlg {
-  height: $space-130;
-  width: $space-130;
+  height: $space-33;
+  width: $space-33;
   border-width: 3px;
 }
 
