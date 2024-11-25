@@ -1,7 +1,5 @@
-import LOGO from "@/assets/images/ICON_LOGO.png";
 import { useLoginMutation } from "@/redux/features/auth/authApi";
 import { Button } from "@/shared/ui/button";
-import { Image } from "@/shared/ui/image";
 import { Input } from "@/shared/ui/input";
 import { Text } from "@/shared/ui/text";
 import showError from "@/utils/ErrorMessage";
@@ -56,23 +54,10 @@ function LoginForm() {
       setLoginData(INIT_DATA_FOR_LOGIN);
       setError("");
     };
-  }, [data, loginError, navigate]); // Only trigger when data or loginError changes
+  }, [data, loginError, navigate]);
 
   return (
     <div className={style.wrapper}>
-      <div className={style.header}>
-        <div className={style.logo}>
-          <Image imgURL={LOGO} width="50px" />
-        </div>
-        <div className={style.heading}>
-          <Text textAlign="center" size="lg" fontWeight="semiBold">
-            Log in to your account
-          </Text>
-          <Text textAlign="center" size="sm" color="gray">
-            Welcome back! Please enter your details.
-          </Text>
-        </div>
-      </div>
       <form onSubmit={handleSubmit} className={style.form}>
         <Input
           label="Email"
@@ -91,7 +76,11 @@ function LoginForm() {
           onChange={handleChange}
         />
         {/* Error Display */}
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error && (
+          <Text size="sm" color="red">
+            {error}
+          </Text>
+        )}
 
         <Button
           variant={

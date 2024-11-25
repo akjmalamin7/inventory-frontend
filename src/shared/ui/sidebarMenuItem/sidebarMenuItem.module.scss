@@ -3,7 +3,7 @@
   & .link {
     height: 38px;
     padding: 0px 20px;
-    @include flexbox(start, center, $space-40);
+    @include flexbox(start, center, $space-3);
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -14,16 +14,16 @@
       position: absolute;
       width: 3px;
       height: 100%;
-      background-color: $blue-s1;
+      background-color: $blue-s8;
       transition: background 0.3s ease-in-out;
     }
     &:hover {
       background-color: $gray-s1;
       p {
-        color: $blue-s1;
+        color: $blue-s8;
       }
       & svg path {
-        fill: $blue-s1;
+        fill: $blue-s8;
       }
     }
   }
@@ -33,14 +33,15 @@
   background-color: $gray-s1;
   .menu_item {
     .link {
+      position: relative;
       &:hover::after {
         content: "";
-        left: 0;
+        right: 0;
         top: 0;
         position: absolute;
         width: 0px;
         height: 100%;
-        background-color: $blue-s1;
+        background-color: $blue-s8;
       }
     }
   }
