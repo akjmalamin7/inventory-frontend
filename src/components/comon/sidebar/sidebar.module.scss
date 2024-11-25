@@ -3,9 +3,6 @@
   height: 100%;
   position: relative;
   & .cross {
-    position: absolute;
-    right: 0;
-    top: 0px;
     display: flex;
     justify-content: end;
     width: 100%;
@@ -15,6 +12,19 @@
     & button {
       padding: 0px;
     }
+  }
+  & .sidebar_body {
+    height: calc(100dvh - 112px);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    // margin-top: 56px;
+  }
+  & .sidebar_footer {
+    @include flexbox(_, center);
+    height: 56px;
   }
 }
 @include laptop {

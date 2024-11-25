@@ -1,14 +1,23 @@
 @use "../../scss/all" as *;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
 .paragraph {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 
 .span {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
   display: inline-block;
 }
 .link {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01, $blue-s1);
   display: inline-block;
 }
 .link.hover:hover {
@@ -17,48 +26,73 @@
 .paragraph_sm,
 .span_sm,
 .link_sm {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 .paragraph_md,
 .span_md,
 .link_md {
-  @include font();
+  @include font($font-size-02, $font-weight-regular, $line-height-02);
 }
 .paragraph_lg,
 .span_lg,
 .link_lg {
-  @include font();
+  @include font($font-size-03, $font-weight-regular, $line-height-03);
+}
+.paragraph_xl,
+.span_xl,
+.link_xl {
+  @include font($font-size-04, $font-weight-regular, $line-height-04);
+}
+.paragraph_2xl,
+.span_2xl,
+.link_2xl {
+  @include font($font-size-05, $font-weight-regular, $line-height-05);
+}
+.paragraph_3xl,
+.span_3xl,
+.link_3xl {
+  @include font($font-size-06, $font-weight-regular, $line-height-06);
 }
 .h1 {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 .h2 {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 .h3 {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 .h4 {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 .h5 {
-  @include font();
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 .h6 {
+  @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 
 /* color */
-.primary {
+.black {
+  color: $black-s17;
 }
-.secondary {
+.gray {
+  color: $gray-s4;
 }
-.tertiary {
+.green {
+  color: $yellow-s5;
 }
-.subdued {
+.blue {
+  color: $blue-s4;
 }
-.linkColor {
+.red {
+  color: $red-s4;
 }
-.danger {
+.yellow {
+  color: $yellow-s5;
+}
+.purple {
+  color: $purple-s1;
 }
 /* text decoration */
 .default {
@@ -101,10 +135,14 @@
 
 /* font weight */
 .regular {
+  font-weight: $font-weight-regular;
 }
 .medium {
+  font-weight: $font-weight-medium;
 }
 .semiBold {
+  $font-weight-semibold: 650;
 }
 .bold {
+  $font-weight-bold: 700;
 }

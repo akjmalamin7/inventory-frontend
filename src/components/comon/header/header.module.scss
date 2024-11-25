@@ -9,6 +9,9 @@
     width: 100%;
     @include flexbox();
   }
+  .logo {
+    @include flexbox(_, center);
+  }
   .hamburger {
     @include flexbox();
     & button {

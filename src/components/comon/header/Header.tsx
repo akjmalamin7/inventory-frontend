@@ -1,4 +1,5 @@
 import { BurgerMenuIcon } from "@/assets/icons/burgerMenuIcon";
+import { InventoryLogo } from "@/assets/icons/inventoryLogo";
 import AUTHOR from "@/assets/images/alamin.png";
 import {
   avatarDropdown,
@@ -8,6 +9,7 @@ import { Avatar } from "@/shared/ui/avatar";
 import { Button } from "@/shared/ui/button";
 import { RootState } from "@reduxjs/toolkit/query";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { AvatarDropdown } from "../avatarDropdown";
 import style from "./header.module.scss";
 const Header = () => {
@@ -27,7 +29,11 @@ const Header = () => {
             <BurgerMenuIcon />
           </Button>
         </div>
-        <div className={style.logo}></div>
+        <div className={style.logo}>
+          <Link to={"/"}>
+            <InventoryLogo />
+          </Link>
+        </div>
       </div>
       <div className={style.right_column}>
         <div className={style.avatar}>
@@ -36,6 +42,7 @@ const Header = () => {
             name="Akjm"
             size="lg"
             radius="50%"
+            borderColor="blue"
             onOk={handleDropdown}
           />
           {dropdown && <AvatarDropdown />}

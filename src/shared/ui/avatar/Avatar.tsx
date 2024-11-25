@@ -3,7 +3,14 @@ import classNames from "classnames";
 import style from "./avatar.module.scss";
 import { UserAvatarProps } from "./avatar.schema";
 
-const Avatar = ({ name, size, url, radius, onOk }: UserAvatarProps) => {
+const Avatar = ({
+  name,
+  size,
+  url,
+  radius,
+  borderColor,
+  onOk,
+}: UserAvatarProps) => {
   let avatarElement: React.ReactNode;
   const colorSet: Record<string, string> = {
     set1: "#5F27CD",
@@ -63,7 +70,11 @@ const Avatar = ({ name, size, url, radius, onOk }: UserAvatarProps) => {
 
   return (
     <div
-      className={classNames(style.avatar, style["avatar_" + size])}
+      className={classNames(
+        style.avatar,
+        style["avatar_" + size],
+        style["border_color_" + borderColor]
+      )}
       style={{
         background: url ? "transparent" : avatarColor,
         border: url ? "1px solid #B9B3AE" : "none",

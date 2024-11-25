@@ -3,6 +3,7 @@
   width: 28px;
   height: 28px;
   border-radius: 3px;
+  overflow: hidden;
   @include flexbox(center, center, 2px);
   & .name {
     letter-spacing: 1px;
@@ -14,6 +15,7 @@
     object-fit: cover;
   }
 }
+
 .avatar_sm {
   width: 28px;
   height: 28px;
@@ -46,7 +48,27 @@
     letter-spacing: 1px;
   }
 }
-
+.border_color_black {
+  border-color: $black-s15 !important;
+}
+.border_color_gray {
+  border: 2px solid $gray-s6 !important;
+}
+.border_color_yellow {
+  border: 2px solid $yellow-s5 !important;
+}
+.border_color_blue {
+  border: 2px solid $blue-s1 !important;
+}
+.border_color_red {
+  border: 2px solid $red-s4 !important;
+}
+.border_color_green {
+  border: 2px solid $green-s3 !important;
+}
+.border_color_purple {
+  border: 2px solid $purple-s1 !important;
+}
 @include laptop {
   .avatar {
     cursor: pointer;

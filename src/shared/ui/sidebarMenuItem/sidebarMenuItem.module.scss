@@ -1,0 +1,47 @@
+@use "@/shared/scss/all" as *;
+.menu_item {
+  & .link {
+    height: 38px;
+    padding: 0px 20px;
+    @include flexbox(start, center, $space-40);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    &:hover::after {
+      content: "";
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      background-color: $blue-s1;
+      transition: background 0.3s ease-in-out;
+    }
+    &:hover {
+      background-color: $gray-s1;
+      p {
+        color: $blue-s1;
+      }
+      & svg path {
+        fill: $blue-s1;
+      }
+    }
+  }
+}
+.children {
+  padding-left: 20px;
+  background-color: $gray-s1;
+  .menu_item {
+    .link {
+      &:hover::after {
+        content: "";
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 0px;
+        height: 100%;
+        background-color: $blue-s1;
+      }
+    }
+  }
+}

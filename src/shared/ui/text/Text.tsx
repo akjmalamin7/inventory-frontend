@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
+import { TextProps } from "./text.model";
 import style from "./text.module.scss";
-import { TextProps } from "./textModel";
 
 const Text = ({
   type = "paragraph",
