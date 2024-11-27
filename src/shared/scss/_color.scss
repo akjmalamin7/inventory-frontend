@@ -3,6 +3,10 @@
 =            Bg Colors            =
 =============================================*/
 
+$text-color-secondary-500: $gray-s5;
+$text-color-dark-1700: $black-s17;
+$text-color-dark-1600: $black-s16;
+
 $sds-color-bg: var(--sds-color-bg, $black-s6) !default;
 $sds-color-bg-inverse: var(--sds-color-bg-inverse, $black-s15) !default;
 

@@ -1,6 +1,6 @@
 export type TextProps = {
   type?: "paragraph" | "span" | "link" | "heading";
-  size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
   headingAs?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   color?: "black" | "gray" | "green" | "red" | "yellow" | "blue" | "purple";
   customColor?: string | undefined;

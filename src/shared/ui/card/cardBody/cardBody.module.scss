@@ -1,0 +1,23 @@
+@use "@/shared/scss/all" as *;
+.card_body {
+  padding: $space-11;
+}
+.card_body.padding_sm {
+  padding: $space-6;
+}
+.card_body.padding_md {
+  padding: $space-9;
+}
+.card_body.padding_lg {
+  padding: $space-11;
+}
+
+.card_body.padding_none {
+  padding: $space-0;
+}
+.border_bottom {
+  border-bottom: $space-1 solid $black-s7;
+}
+.border_top {
+  border-top: $space-1 solid $black-s7;
+}

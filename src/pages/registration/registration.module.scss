@@ -1,5 +1,5 @@
 @use "@/shared/scss/all" as *;
-.login_page {
+.registration_page {
   height: 100dvh;
   @include flexbox(center, center);
 }

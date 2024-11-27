@@ -1,0 +1,30 @@
+@use "@/shared/scss/all" as *;
+.card {
+  background: $black-s1;
+  &.cart_type_shadow {
+    box-shadow: $card-shadow;
+  }
+  &.cart_type_bordered {
+    border: 1px solid $black-s7;
+  }
+}
+.radius_xsm {
+  border-radius: $space-5;
+}
+.radius_sm {
+  border-radius: $space-6;
+}
+.radius_md {
+  border-radius: $space-7;
+}
+.radius_lg {
+  border-radius: $space-9;
+}
+.radius_xlg {
+  border-radius: $space-11;
+}
+@include tablet {
+  .card {
+    border-radius: $space-7;
+  }
+}

@@ -1,8 +1,10 @@
 @use "@/shared/scss/all" as *;
 .wrapper {
-  max-width: 370px;
+  max-width: 450px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 50px;
+
   .logo {
     @include flexbox(center);
     margin-bottom: 16px;
@@ -11,8 +13,11 @@
     margin-bottom: 20px;
   }
   .form {
-    @include flexbox(_, _, $space-9, column);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
   }
+
   .sign_up_link {
     color: $blue-s8;
   }
@@ -20,7 +25,7 @@
     @include flexbox(space-between, center);
   }
   .password_check {
-    @include flexbox(center, _, $space-3, column);
+    @include flexbox(center, _, $space-2, column);
     li {
       @include flexbox(start, center, $space-3);
       svg {
@@ -28,6 +33,19 @@
       }
       span {
         font-size: $font-size-00;
+      }
+    }
+  }
+}
+@include tablet {
+  .wrapper {
+    // .form {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+    .button_wrapper {
+      & button {
+        display: flex;
+        width: 100% !important;
       }
     }
   }

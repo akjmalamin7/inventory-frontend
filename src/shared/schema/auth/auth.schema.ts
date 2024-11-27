@@ -2,7 +2,8 @@ export interface UserSchema {
   firstName: string;
   lastName: string;
   email: string;
-  phone: string;
+  mobile: string;
+  password: string;
   photo: string;
 }
 interface AuthState {

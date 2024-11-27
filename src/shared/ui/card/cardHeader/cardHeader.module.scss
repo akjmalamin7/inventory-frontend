@@ -1,0 +1,62 @@
+@use "@/shared/scss/all" as *;
+.card_header {
+  padding: $space-11;
+}
+.padding_sm {
+  padding: $space-6;
+}
+.padding_md {
+  padding: $space-9;
+}
+.padding_lg {
+  padding: $space-11;
+}
+.flex {
+  display: flex;
+  gap: $space-8;
+}
+.flex_start {
+  justify-content: start;
+}
+.flex_center {
+  justify-content: center;
+}
+.flex_end {
+  justify-content: end;
+}
+.flex_between {
+  justify-content: space-between;
+}
+.flex_around {
+  justify-content: space-around;
+}
+.border_bottom {
+  border-bottom: $space-1 solid $black-s7;
+}
+.border_top {
+  border-top: $space-1 solid $black-s7;
+}
+
+.heading_bg {
+  background-color: $black-s5;
+}
+.radius_xsm {
+  border-top-right-radius: $space-5;
+  border-top-left-radius: $space-5;
+}
+.radius_sm {
+  border-top-right-radius: $space-5;
+  border-top-left-radius: $space-5;
+}
+.radius_md {
+  border-top-right-radius: $space-7;
+  border-top-left-radius: $space-7;
+}
+.radius_lg {
+  border-top-right-radius: $space-9;
+  border-top-left-radius: $space-9;
+}
+.radius_xlg {
+  border-top-right-radius: $space-11;
+  border-top-left-radius: $space-11;
+}

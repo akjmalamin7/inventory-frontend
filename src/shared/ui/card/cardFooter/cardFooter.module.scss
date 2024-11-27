@@ -1,0 +1,41 @@
+@use "@/shared/scss/all" as *;
+.card_footer {
+  padding: $space-11;
+}
+.card_footer.padding_sm {
+  padding: $space-11;
+}
+.card_footer.padding_md {
+  padding: $space-9;
+}
+.card_footer.padding_lg {
+  padding: $space-11;
+}
+.footer_bg {
+  background-color: $black-s5;
+}
+.flex {
+  display: flex;
+  gap: $space-8;
+}
+.flex_start {
+  justify-content: start;
+}
+.flex_center {
+  justify-content: center;
+}
+.flex_end {
+  justify-content: end;
+}
+.flex_between {
+  justify-content: space-between;
+}
+.flex_around {
+  justify-content: space-around;
+}
+.border_top {
+  border-top: $space-1 solid $black-s7;
+}
+.border_bottom {
+  border-bottom: $space-1 solid $black-s7;
+}
