@@ -23,8 +23,9 @@
     // margin-top: 56px;
   }
   & .sidebar_footer {
-    @include flexbox(_, center);
     height: 56px;
+    border-top:1px solid rgba(30, 39,46,.1);
+    @include flexbox(_, center);
   }
 }
 @include laptop {

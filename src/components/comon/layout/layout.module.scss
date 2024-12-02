@@ -27,7 +27,8 @@
   width: 100%;
   height: calc(100dvh - 56px);
   padding: 20px;
-  background-color: #f7f6f6;
+  background-color: $bg-color-extra-1;
+  // background-color: #f7f6f6;
 }
 @include laptop {
   .sidebar {

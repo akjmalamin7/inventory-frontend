@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { SidebarMenuItem } from "../sidebarMenuItem";
 import { SIDEBAR_MENU_DATA, SidebarMenuProps } from "./sidebar.menu";
 
 const SidebarMenu = () => {
+  const [activeMenuId, setActiveMenuId] = useState<string | null>(null)
   return (
     <div>
       <ul>
@@ -9,8 +11,8 @@ const SidebarMenu = () => {
           <SidebarMenuItem
             key={menu._id}
             menu={menu}
-            index={1}
-            activeChildIndex={1}
+            activeMenuId={activeMenuId}
+            setActiveMenuId={setActiveMenuId} 
           />
         ))}
       </ul>

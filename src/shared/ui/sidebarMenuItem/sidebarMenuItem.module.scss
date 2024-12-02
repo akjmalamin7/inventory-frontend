@@ -1,12 +1,68 @@
 @use "@/shared/scss/all" as *;
 .menu_item {
+  background-color: #fff;
+  position: relative;
+  z-index: 19;
+  & .children {
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden; 
+    padding-left: 20px;
+    opacity: 0.5;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; // Add opacity and visibility to
+    background-color: $ex-color-s3;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & .menu_item {
+      background-color: transparent;
+      & .link {
+        position: relative;
+        height: 32px !important;
+        &:hover::after {
+          content: "";
+          right: 0;
+          top: 0;
+          position: absolute;
+          width: 0px;
+          height: 100%;
+          background-color: $blue-s8;
+        }
+      }
+    }
+  }
+  &.active {
+    & .link_active{
+      background-color:$blue-s1;
+      border-bottom: 1px solid $blue-s4;
+      &::after {
+        content: "";
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        background: $blue-s4;
+        transition: background 0.3s ease-in-out;
+      }
+    }
+    & .children {
+      max-height: 300px;
+      opacity: 1;
+      visibility: visible; // Set visibility to visible
+      overflow-y: auto;
+    }
+  }
+
   & .link {
     height: 38px;
     padding: 0px 20px;
-    @include flexbox(start, center, $space-3);
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease-in-out;
+    & p {
+      font-size: 13px;
+    }
     &:hover::after {
       content: "";
       left: 0;
@@ -14,7 +70,7 @@
       position: absolute;
       width: 3px;
       height: 100%;
-      background-color: $blue-s8;
+      background: $blue-s8;
       transition: background 0.3s ease-in-out;
     }
     &:hover {
@@ -26,22 +82,14 @@
         fill: $blue-s8;
       }
     }
-  }
-}
-.children {
-  padding-left: 20px;
-  background-color: $gray-s1;
-  .menu_item {
-    .link {
-      position: relative;
-      &:hover::after {
-        content: "";
-        right: 0;
-        top: 0;
-        position: absolute;
-        width: 0px;
-        height: 100%;
-        background-color: $blue-s8;
+    @include flexbox(space-between, center, $space-3);
+    & .link_inner {
+      @include flexbox(start, center, $space-3);
+    }
+    & .arrow_icon {
+      @include flexbox(center, center);
+      & svg {
+        width: 18px;
       }
     }
   }

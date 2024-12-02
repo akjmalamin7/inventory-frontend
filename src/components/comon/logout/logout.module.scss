@@ -8,6 +8,6 @@
     outline: none;
     background-color: $black-s1;
     @include flexbox(start, center);
-    @include font($font-size-01, $font-weight-regular, _, $black-s17);
+    @include font(13px, $font-weight-regular, _, $black-s17);
   }
 }
