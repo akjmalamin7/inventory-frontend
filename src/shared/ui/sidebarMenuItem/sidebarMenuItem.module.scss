@@ -7,10 +7,11 @@
     max-height: 0px;
     overflow: hidden;
     visibility: hidden; 
-    padding-left: 20px;
+    // padding-left: 20px;
     opacity: 0.5;
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; // Add opacity and visibility to
-    background-color: $ex-color-s3;
+    // background-color: $ex-color-s3;
+    background-color: #fff;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -18,7 +19,9 @@
       background-color: transparent;
       & .link {
         position: relative;
-        height: 32px !important;
+        height: 34px !important;
+        padding-left: 44px;
+        
         &:hover::after {
           content: "";
           right: 0;
@@ -28,13 +31,22 @@
           height: 100%;
           background-color: $blue-s8;
         }
+        &:hover{
+          background-color: transparent;
+        }
       }
     }
   }
   &.active {
     & .link_active{
       background-color:$blue-s1;
-      border-bottom: 1px solid $blue-s4;
+      // border-bottom: 1px solid $blue-s4;
+      p {
+        color: $blue-s8;
+      }
+      & svg path {
+        fill: $blue-s8;
+      }
       &::after {
         content: "";
         left: 0;
@@ -49,7 +61,7 @@
     & .children {
       max-height: 300px;
       opacity: 1;
-      visibility: visible; // Set visibility to visible
+      visibility: visible;
       overflow-y: auto;
     }
   }
@@ -74,7 +86,8 @@
       transition: background 0.3s ease-in-out;
     }
     &:hover {
-      background-color: $gray-s1;
+      // background-color: $gray-s1;
+      background-color:$blue-s1;
       p {
         color: $blue-s8;
       }
@@ -82,7 +95,6 @@
         fill: $blue-s8;
       }
     }
-    @include flexbox(space-between, center, $space-3);
     & .link_inner {
       @include flexbox(start, center, $space-3);
     }
@@ -92,5 +104,6 @@
         width: 18px;
       }
     }
+    @include flexbox(space-between, center, $space-3);
   }
 }
