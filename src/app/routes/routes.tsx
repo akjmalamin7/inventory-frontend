@@ -12,19 +12,30 @@ const RegistrationPage = lazy(
   () => import("@/pages/registration/Registration")
 );
 const NotFoundPage = lazy(() => import("@/pages/notFound/NotFound"));
-const SupplierPage = lazy(() => import("@/pages/supplier/Supplier"));
-const ExpensePage = lazy(() => import("@/pages/expense/Expense"));
-const PurchasePage = lazy(() => import("@/pages/purchase/Purchase"));
-const ProductsPage = lazy(() => import("@/pages/products/Products"));
-const SalesPage = lazy(() => import("@/pages/sales/Sales"));
-const ReturnPage = lazy(() => import("@/pages/return/Return"));
-const ReportPage = lazy(() => import("@/pages/report/Report"));
-const CreateSupplierPage = lazy(
-  () => import("@/pages/createSupplier/CreateSupplier")
-);
-const CreateExpensePage = lazy(
-  () => import("@/pages/createExpense/CreateExpense")
-);
+
+const LazyCustomer = lazy(()=>import("@/pages/customers/customer"));
+const LazyNewCustomer = lazy(()=>import("@/pages/customers/new"));
+const LazySupplier = lazy(()=>import("@/pages/suppliers/supplier"));
+const LazyNewSupplier = lazy(()=>import("@/pages/customers/new"));
+const LazyExpense = lazy(()=>import("@/pages/expenses/expense"));
+const LazyNewExpense = lazy(()=>import("@/pages/expenses/new"));
+const LazyNewExpenseType = lazy(()=>import("@/pages/expenses/newExpenseType"));
+const LazyProducts = lazy(()=>import("@/pages/products/list"));
+const LazyNewProduct = lazy(()=>import("@/pages/products/new"));
+const LazyBrands = lazy(()=>import("@/pages/brands/list"));
+const LazyNewBrand = lazy(()=>import("@/pages/brands/new"));
+const LazyNewCategory = lazy(()=>import("@/pages/category/new"));
+const LazyCategories = lazy(()=>import("@/pages/category/list"));
+const LazyNewPurchase = lazy(()=>import("@/pages/purchase/new"));
+const LazyPurchase = lazy(()=>import("@/pages/purchase/list"));
+const LazyNewSale = lazy(()=>import("@/pages/sales/new"));
+const LazySales = lazy(()=>import("@/pages/sales/list"));
+const LazyNewReturn = lazy(()=>import("@/pages/return/new"));
+const LazyReturn = lazy(()=>import("@/pages/return/list"));
+const LazyReturnReport = lazy(()=>import("@/pages/report/return"));
+const LazySalesReport = lazy(()=>import("@/pages/report/sales"));
+const LazyPurchaseReport = lazy(()=>import("@/pages/report//purchase"));
+
 // Loading and Error Fallback Components
 
 const ErrorFallback = () => <div>Something went wrong. Page not found.</div>;
@@ -89,74 +100,187 @@ export const router = createBrowserRouter(
               ),
             },
             {
-              path: "/supplier",
+              path: "/customer/list",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <SupplierPage />
+                  <LazyCustomer />
                 </Suspense>
               ),
             },
             {
-              path: "/supplier/create",
+              path: "/customer/new",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <CreateSupplierPage />
+                  <LazyNewCustomer />
                 </Suspense>
               ),
             },
             {
-              path: "/expense",
+              path: "/supplier/list",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <ExpensePage />
+                  <LazySupplier />
                 </Suspense>
               ),
             },
             {
-              path: "/expense/create",
+              path: "/supplier/new",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <CreateExpensePage />
+                  <LazyNewSupplier />
                 </Suspense>
               ),
             },
             {
-              path: "/products",
+              path: "/expense/new",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <ProductsPage />
+                  <LazyNewExpense />
                 </Suspense>
               ),
             },
             {
-              path: "/purchase",
+              path: "/expense/list",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <PurchasePage />
+                  <LazyExpense />
                 </Suspense>
               ),
             },
             {
-              path: "/sales",
+              path: "/expense/type/new",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <SalesPage />
+                  <LazyNewExpenseType />
+                </Suspense>
+              ),
+            },
+            
+            {
+              path: "/products/new",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyNewProduct />
                 </Suspense>
               ),
             },
             {
-              path: "/return",
+              path: "/brands/new",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <ReturnPage />
+                  <LazyNewBrand />
                 </Suspense>
               ),
             },
             {
-              path: "/report",
+              path: "/brands/list",
               element: (
                 <Suspense fallback={<LazyLoader />}>
-                  <ReportPage />
+                  <LazyBrands />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/categories/new",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyNewCategory />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/categories/list",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyCategories />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/products/list",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyProducts />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/products/new",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyNewProduct />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/purchase/new",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyNewPurchase />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/purchase/list",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyPurchase />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/sales/new",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyNewSale />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/sales/list",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazySales />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/return/new",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyNewReturn />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/return/list",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                  <LazyReturn />
+                </Suspense>
+              ),
+            },
+            {
+              path: "/report/sales",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                <LazySalesReport/>
+                </Suspense>
+              ),
+            },
+            {
+              path: "/report/return",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                <LazyReturnReport/>
+                </Suspense>
+              ),
+            },
+            {
+              path: "/report/purchase",
+              element: (
+                <Suspense fallback={<LazyLoader />}>
+                <LazyPurchaseReport/>
                 </Suspense>
               ),
             },
@@ -175,7 +299,7 @@ export const router = createBrowserRouter(
   ],
   {
     future: {
-      v7_startTransition: true,
+      // v7_prependBasename: true,
       v7_relativeSplatPath: true,
       v7_fetcherPersist: true,
       v7_normalizeFormMethod: true,

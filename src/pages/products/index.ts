@@ -1,1 +1,3 @@
-export { default as Products } from "./Products";
+export { Products } from "./list"
+export { NewProduct } from "./new"
+

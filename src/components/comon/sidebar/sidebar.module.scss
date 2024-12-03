@@ -1,6 +1,7 @@
 @use "@/shared/scss/all" as *;
 .sidebar_area {
   height: 100%;
+
   position: relative;
   & .cross {
     display: flex;

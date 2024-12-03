@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { SidebarMenuItem } from "../sidebarMenuItem";
 import { SIDEBAR_MENU_DATA, SidebarMenuProps } from "./sidebar.menu";
 
 const SidebarMenu = () => {
   const [activeMenuId, setActiveMenuId] = useState<string | null>(null)
+  const location = useLocation();
   return (
     <div>
       <ul>
@@ -11,7 +13,7 @@ const SidebarMenu = () => {
           <SidebarMenuItem
             key={menu._id}
             menu={menu}
-            activeMenuId={activeMenuId}
+            activeMenuId={activeMenuId || location.pathname}
             setActiveMenuId={setActiveMenuId} 
           />
         ))}

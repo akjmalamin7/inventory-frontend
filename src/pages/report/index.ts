@@ -1,1 +1,4 @@
-export { default as Report } from "./Report";
+export { PurchaseReport } from "./purchase";
+export { ReturnReport } from "./return";
+export { SalesReport } from "./sales";
+

@@ -10,10 +10,10 @@
 
 .btn--size-sm {
   @include text-body-sm;
-  padding: $space-3 $space-9;
+  padding: $space-2 $space-8;
   @include font($font-size-00);
   @include tablet {
-    padding: $space-4 $space-9;
+    padding: $space-3 $space-9;
   }
 }
 

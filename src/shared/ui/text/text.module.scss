@@ -65,7 +65,7 @@ h6 {
   @include font($font-size-01, $font-weight-regular, $line-height-01);
 }
 .h3 {
-  @include font($font-size-01, $font-weight-regular, $line-height-01);
+  @include font($font-size-02, $font-weight-regular, $line-height-01);
 }
 .h4 {
   @include font($font-size-01, $font-weight-regular, $line-height-01);
@@ -150,4 +150,11 @@ h6 {
 }
 .bold {
   font-weight: $font-weight-bold;
+}
+@include tablet{
+  
+  .h3 {
+    @include font($font-size-04, $font-weight-regular, $line-height-01);
+  }
+
 }

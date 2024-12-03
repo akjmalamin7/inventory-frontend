@@ -1,0 +1,4 @@
+@use "@/shared/scss/all" as *;
+.wrapper{
+  @include flexbox(space-between, center)
+}

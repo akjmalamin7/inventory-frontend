@@ -1,1 +1,3 @@
-export { default as Sales } from "./Sales";
+export { Sales } from "./list"
+export { NewSales } from "./new"
+

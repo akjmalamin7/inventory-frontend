@@ -10,7 +10,7 @@ const Text = ({
   target = "_blank",
   hover = true,
   headingAs = "h1",
-  color = "default",
+  color = "black",
   customColor,
   truncate = false,
   textDecoration = "default",

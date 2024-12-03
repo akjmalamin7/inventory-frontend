@@ -1,6 +1,6 @@
 import ArrowIcon from "@/assets/icons/arrorIcon";
 import classNames from "classnames";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { SidebarMenuProps } from "../sidebarMenu/sidebar.menu";
 import { Text } from "../text";
 import style from "./sidebarMenuItem.module.scss";
@@ -12,12 +12,13 @@ interface Props {
 }
 
 const SidebarMenuItem = ({ menu, setActiveMenuId,activeMenuId}: Props) => {
-
-  const isDropdown = activeMenuId === menu._id;
+  const location = useLocation();
+  const isDropdown =
+    activeMenuId === menu._id || location.pathname.startsWith(menu.path);
  
-  const handleDropdown = () => {
-    setActiveMenuId(isDropdown ? null : menu._id); 
-  };
+    const handleDropdown = () => {
+      setActiveMenuId(isDropdown ? null : menu._id);
+    };
   return (
     <li className={classNames(style.menu_item, { [style.active]: isDropdown && menu?.isParent})}>
       <div onClick={() => handleDropdown()}>

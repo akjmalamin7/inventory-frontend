@@ -1,27 +1,37 @@
 @use "@/shared/scss/all" as *;
+
 .menu_item {
   background-color: #fff;
   position: relative;
   z-index: 19;
+
   & .children {
     max-height: 0px;
     overflow: hidden;
-    visibility: hidden; 
-    // padding-left: 20px;
+    visibility: hidden;
     opacity: 0.5;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; // Add opacity and visibility to
-    // background-color: $ex-color-s3;
     background-color: #fff;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
     &::-webkit-scrollbar {
       display: none;
     }
+
     & .menu_item {
       background-color: transparent;
+
       & .link {
         position: relative;
         height: 34px !important;
         padding-left: 44px;
-        
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        &.active {
+          & .link_inner p {
+            color: red !important;
+          }
+        }
+
         &:hover::after {
           content: "";
           right: 0;
@@ -31,22 +41,26 @@
           height: 100%;
           background-color: $blue-s8;
         }
-        &:hover{
+
+        &:hover {
           background-color: transparent;
         }
       }
     }
   }
+
   &.active {
-    & .link_active{
-      background-color:$blue-s1;
-      // border-bottom: 1px solid $blue-s4;
+    & .link_active {
+      background-color: $blue-s1;
+
       p {
         color: $blue-s8;
       }
+
       & svg path {
         fill: $blue-s8;
       }
+
       &::after {
         content: "";
         left: 0;
@@ -58,6 +72,7 @@
         transition: background 0.3s ease-in-out;
       }
     }
+
     & .children {
       max-height: 300px;
       opacity: 1;
@@ -72,9 +87,13 @@
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease-in-out;
+
     & p {
       font-size: 13px;
+      font-weight: 450;
+      color: rgb(80, 90, 100);
     }
+
     &:hover::after {
       content: "";
       left: 0;
@@ -85,25 +104,35 @@
       background: $blue-s8;
       transition: background 0.3s ease-in-out;
     }
+
     &:hover {
-      // background-color: $gray-s1;
-      background-color:$blue-s1;
+      background-color: $blue-s1;
+
       p {
         color: $blue-s8;
       }
+
       & svg path {
         fill: $blue-s8;
       }
     }
+
     & .link_inner {
       @include flexbox(start, center, $space-3);
     }
+
     & .arrow_icon {
       @include flexbox(center, center);
+
       & svg {
         width: 18px;
       }
     }
+
+    & svg {
+      opacity: 0.7;
+    }
+
     @include flexbox(space-between, center, $space-3);
   }
 }

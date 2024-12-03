@@ -1,1 +1,2 @@
-export { default as Purchase } from "./Purchase";
+export { Purchase } from "./list"
+export { NewPurchase } from "./new"
