@@ -4,7 +4,7 @@ import style from "./pageHeader.module.scss";
 interface Props {
   pageTitle?: string;
   button1Text?:string;
-  onButton1:()=>void
+  onButton1?:()=>void
 }
 const PageHeader = ({ pageTitle,button1Text,onButton1 }: Props) => {
   return (

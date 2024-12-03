@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@reduxjs/toolkit": "^2.3.0",
     "@uidotdev/usehooks": "^2.4.1",
     "classnames": "^2.5.1",

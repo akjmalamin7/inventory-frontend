@@ -136,6 +136,11 @@
 .prefix_icon_padding {
   padding-right: $space-17;
 }
+.error_text{
+  font-size: 12px;
+  color:$red-s10;
+
+}
 @include tablet {
   /* size */
   .sm_input {

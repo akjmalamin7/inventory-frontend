@@ -1,8 +1,8 @@
 import React, { ChangeEvent, FocusEvent } from "react";
-export type ErrorType = {
+export interface ErrorType {
   status: boolean;
-  message: string;
-};
+  message: string | undefined; // Allow undefined
+}
 
 export type LabelActionType = {
   content: string;

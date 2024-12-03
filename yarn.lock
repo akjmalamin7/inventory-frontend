@@ -678,6 +678,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/resolvers@npm:^3.9.1":
+  version: 3.9.1
+  resolution: "@hookform/resolvers@npm:3.9.1"
+  peerDependencies:
+    react-hook-form: ^7.0.0
+  checksum: 10c0/8a4056db3860b12ee30921ba352996104d6ae75ac45996d4c8b6df429e07ee73f5b87c82a22a15403789213f6f52f5fead1c2637b26ef624068b68d213362cd1
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -3580,6 +3589,7 @@ __metadata:
   dependencies:
     "@chromatic-com/storybook": "npm:3.2.2"
     "@eslint/js": "npm:^9.13.0"
+    "@hookform/resolvers": "npm:^3.9.1"
     "@reduxjs/toolkit": "npm:^2.3.0"
     "@storybook/addon-essentials": "npm:^8.4.5"
     "@storybook/addon-interactions": "npm:^8.4.5"

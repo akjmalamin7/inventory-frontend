@@ -1,0 +1,16 @@
+@use "@/shared/scss/all" as *;
+.form{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap:16px;
+}
+@include tablet{
+  .form{
+    // grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    .button{
+      grid-column: 1/-1;
+      @include flexbox(end)
+    }
+  }
+}

@@ -108,7 +108,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               onClick={onClear}
               type="button"
             >
-              <CrossIcon />
+              <CrossIcon size="md" />
             </button>
           )}
           {prefix && (

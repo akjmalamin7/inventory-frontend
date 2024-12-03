@@ -10,19 +10,23 @@
 
 .btn--size-sm {
   @include text-body-sm;
-  padding: $space-2 $space-8;
+  padding: $space-0 $space-8;
+  height: $space-15;
   @include font($font-size-00);
   @include tablet {
-    padding: $space-3 $space-9;
+    padding: $space-0 $space-9;
+    height: $space-17;
   }
 }
 
 .btn--size-md {
   @include text-body-md;
-  padding: $space-4 $space-11;
+  padding: $space-0 $space-11;
+  height: $space-17;
   @include font($font-size-01);
   @include tablet {
-    padding: $space-5 $space-11;
+    padding: $space-0 $space-11;
+    height: $space-19;
   }
 }
 
