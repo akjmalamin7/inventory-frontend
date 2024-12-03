@@ -58,7 +58,7 @@ const CustomerForm = () => {
             error={errors.email ? { status: true, message: errors.email.message } : undefined}
           />
         </div>
-        <div className={style.input}>
+        <div className={style.address}>
           <Input
             size="md"
             {...register("address")}

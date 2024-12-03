@@ -5,7 +5,7 @@ import { Card } from "@/shared/ui/card"
 
 const NewCustomer = () => {
   return (
-    <Container size="xsm">
+    <Container size="md">
       <PageHeader pageTitle="Add New Customer" />
       <Card>
         <Card.Body padding="lg">
