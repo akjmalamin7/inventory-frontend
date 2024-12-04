@@ -6,7 +6,6 @@
 }
 @include tablet{
   .form{
-    grid-template-columns: repeat(2, 1fr);
     gap:20px;
     .button{
       grid-column: 1/-1;

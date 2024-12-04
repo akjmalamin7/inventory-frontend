@@ -1,0 +1,92 @@
+@use "@/shared/scss/all" as *;
+
+.label_action_wrapper {
+  @include flexbox(space-between, center);
+  margin-bottom: $space-4;
+}
+.label_text {
+  font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular, _, $black-s17);
+  @include flexbox(start, center);
+  width: 100%;
+}
+.action_text_wrapper {
+  @include flexbox(end, center);
+  width: 100%;
+}
+.action_text {
+  @include font($font-size-00, $font-weight-regular, _, $green-s6);
+}
+
+.input_field_wrapper {
+  position: relative;
+  height: 90px;
+}
+
+.textarea_field {
+  font-family: $font-family-inter;
+  border: $space-1 solid $ex-color-s2;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  padding: $space-7 $space-7;
+  box-sizing: border-box;
+  background: transparent;
+  outline: $space-1 solid transparent;
+  // box-shadow: $space_0 $space_0 $space_0 $space_2 $white;
+  resize: none;
+  @include font($font-size-00, $font-weight-regular, _, $black-s17);
+
+  &:focus {
+    border: $space-1 solid transparent;
+    outline-color: $black-s17;
+    background: transparent !important;
+  }
+  &::placeholder{
+    @include font($font-size-00, $font-weight-regular, _, $gray-s5);
+  }
+}
+
+.error_style {
+  background: $red-s1;
+  border-color: $red-s1;
+}
+.error_text {
+  font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular);
+  letter-spacing: 0.5px;
+  margin: $space-4 $space-0 $space-0 $space-0;
+}
+.help_text {
+  font-family: $font-family-inter;
+  @include font($font-size-00, $font-weight-regular, _, $blue-s1);
+  letter-spacing: 0.5px;
+  margin: $space-4 $space-0 $space-0 $space-0;
+}
+.cross_icon {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: $space-0;
+  top: $space-0;
+  height: 100%;
+  width: $space-16;
+  @include flexbox(center, center);
+  & svg {
+    width: $space-11;
+    height: $space-9;
+  }
+}
+
+@include tablet {
+  .input_field_wrapper {
+    height: 110px;
+  }
+}
+
+@include laptop {
+  .action_text,
+  .cross_icon {
+    cursor: pointer;
+  }
+}

@@ -2,6 +2,7 @@ import { useNewCustomerMutation } from "@/redux/features/customer/customerApi";
 import { CustomerAddModel, CustomerSchema } from "@/shared/schema/customer/customer.schema";
 import { Button } from "@/shared/ui/button";
 import { Input } from "@/shared/ui/input";
+import Textarea from "@/shared/ui/textarea";
 import showError from "@/utils/ErrorMessage";
 import showSuccess from "@/utils/SuccessMessage";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -16,7 +17,7 @@ const CustomerForm = () => {
     formState: { errors, isValid  },
   } = useForm<CustomerSchema>({
     resolver: yupResolver(CustomerAddModel),
-     mode: "onChange"
+     mode: "all"
   });
   const onSubmit: SubmitHandler<CustomerSchema> = async (data) => {
     try {
@@ -28,6 +29,7 @@ const CustomerForm = () => {
       console.error("Error adding customer:", error);
     }
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={style.form}>
@@ -59,9 +61,8 @@ const CustomerForm = () => {
           />
         </div>
         <div className={style.address}>
-          <Input
-            size="md"
-            {...register("address")}
+          <Textarea
+             {...register("address")}
             name="address"
             placeholder="Enter address"
             error={errors.address ? { status: true, message: errors.address.message } : undefined}
