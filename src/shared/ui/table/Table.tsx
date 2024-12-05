@@ -38,7 +38,7 @@ const Table = ({
           <TableStyled.TR>
             {columns.map((column) => (
               <TableStyled.TH key={column._id} $align={column.align} width={column.width}>
-                <Text size="sm" fontWeight="semiBold" color="gray" textAlign={column.align}>
+                <Text size="xs" fontWeight="semiBold" color="gray" textAlign={column.align}>
                   {column.title}
                 </Text>
               </TableStyled.TH>
@@ -65,7 +65,7 @@ const Table = ({
                     {column.view ? (
                       column.view(data)
                     ) : (
-                      <Text size="sm" fontWeight="regular" color="gray">
+                      <Text size="xs" fontWeight="regular" color="gray">
                         {data[column.dataIndex] as React.ReactNode} 
                       </Text>
                     )}

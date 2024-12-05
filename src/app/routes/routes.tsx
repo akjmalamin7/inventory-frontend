@@ -16,7 +16,7 @@ const NotFoundPage = lazy(() => import("@/pages/notFound/NotFound"));
 const LazyCustomer = lazy(()=>import("@/pages/customers/customer"));
 const LazyNewCustomer = lazy(()=>import("@/pages/customers/new"));
 const LazySupplier = lazy(()=>import("@/pages/suppliers/supplier"));
-const LazyNewSupplier = lazy(()=>import("@/pages/customers/new"));
+const LazyNewSupplier = lazy(()=>import("@/pages/suppliers/new"));
 const LazyExpense = lazy(()=>import("@/pages/expenses/expense"));
 const LazyNewExpense = lazy(()=>import("@/pages/expenses/new"));
 const LazyNewExpenseType = lazy(()=>import("@/pages/expenses/newExpenseType"));

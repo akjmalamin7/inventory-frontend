@@ -23,9 +23,9 @@ h6 {
 .link.hover:hover {
   text-decoration: underline;
 }
-.paragraph_xm,
-.span_xm,
-.link_xm {
+.paragraph_xs,
+.span_xs,
+.link_xs {
   @include font($font-size-00, $font-weight-regular, $line-height-01);
 }
 .paragraph_sm,

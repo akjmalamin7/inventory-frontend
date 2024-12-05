@@ -1,5 +1,5 @@
-import { useNewCustomerMutation } from "@/redux/features/customer/customerApi";
-import { CustomerAddModel, CustomerSchema } from "@/shared/schema/customer/customer.schema";
+import { useNewSupplierMutation } from "@/redux/features/supplier/supplierApi";
+import { SupplierAddModel, SupplierSchema } from "@/shared/schema/supplier/supplier.shcema";
 import { Button } from "@/shared/ui/button";
 import { Input } from "@/shared/ui/input";
 import Textarea from "@/shared/ui/textarea";
@@ -7,70 +7,70 @@ import showError from "@/utils/ErrorMessage";
 import showSuccess from "@/utils/SuccessMessage";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
-import style from "./customerForm.module.scss";
-const CustomerForm = () => {
-  const [newCustomer, { isLoading }] = useNewCustomerMutation();
+import style from "./supplierForm.module.scss";
+const SupplierForm = () => {
+  const [newCustomer, { isLoading }] = useNewSupplierMutation();
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid  },
-  } = useForm<CustomerSchema>({
-    resolver: yupResolver(CustomerAddModel),
-     mode: "all"
+    formState: { errors, isValid },
+  } = useForm<SupplierSchema>({
+    resolver: yupResolver(SupplierAddModel),
+    mode: "all",
   });
-  const onSubmit: SubmitHandler<CustomerSchema> = async (data) => {
+  const onSubmit: SubmitHandler<SupplierSchema> = async (data) => {
     try {
-     await newCustomer(data).unwrap();
-     showSuccess({ message: "Customer crated!" });
-     reset();
+      await newCustomer(data).unwrap();
+      showSuccess({ message: "Supplier crated!" });
+      reset();
     } catch (error) {
       showError({ message: "Something went wrong" });
-      console.error("Error adding customer:", error);
+      console.error("Error adding supplier", error);
     }
   };
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={style.form}>
         <div className={style.input}>
           <Input
-            size="md"
             {...register("name")}
-            name="name"
-            placeholder="Enter customer name"
             error={errors.name ? { status: true, message: errors.name.message } : undefined}
+            size="md"
+            name="name"
+            placeholder="Enter supplier name"
           />
         </div>
         <div className={style.input}>
           <Input
-            size="md"
             {...register("phone")}
+            error={errors.phone ? { status: true, message: errors.phone.message } : undefined}
+            size="md"
             name="phone"
             placeholder="Enter phone number"
-            error={errors.phone ? { status: true, message: errors.phone.message } : undefined}
           />
         </div>
         <div className={style.input}>
           <Input
-            size="md"
             {...register("email")}
+            error={errors.email ? { status: true, message: errors.email.message } : undefined}
+            type="email"
+            size="md"
             name="email"
             placeholder="Enter email address"
-            error={errors.email ? { status: true, message: errors.email.message } : undefined}
           />
         </div>
         <div className={style.address}>
           <Textarea
-             {...register("address")}
+            {...register("address")}
+            error={errors.address ? { status: true, message: errors.address.message } : undefined}
             name="address"
             placeholder="Enter address"
-            error={errors.address ? { status: true, message: errors.address.message } : undefined}
           />
         </div>
         <div className={style.button}>
-          <Button size="md" type="submit" disabled={!isValid || isLoading}>
-            {isLoading ? "Adding...":"Add"}
+          <Button type="submit" size="md" disabled={!isValid || isLoading}>
+            {isLoading ? "Adding..." : "Add"}
           </Button>
         </div>
       </div>
@@ -78,4 +78,4 @@ const CustomerForm = () => {
   );
 };
 
-export default CustomerForm;
+export default SupplierForm;
